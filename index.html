@@ -1,0 +1,2239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ahmed M. Bedeer — Enterprise Architect &amp; Digital Transformation Leader</title>
+<meta name="description" content="Enterprise Architecture & Digital Transformation Specialist · TOGAF · NORA · ArchiMate · HIMSS · 7+ years across healthcare and technology programs in KSA." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #050917;
+    --bg-2: #0A1128;
+    --surface: #0F1A36;
+    --surface-2: #14213D;
+    --surface-3: #182B52;
+    --line: rgba(148, 175, 255, 0.08);
+    --line-strong: rgba(148, 175, 255, 0.18);
+    --ink: #F1F5F9;
+    --ink-2: #94A3B8;
+    --ink-3: #475569;
+    --blue: #3B82F6;
+    --blue-light: #60A5FA;
+    --cyan: #22D3EE;
+    --electric: #00F5FF;
+    --purple: #A78BFA;
+    --indigo: #6366F1;
+    --green: #10B981;
+    --red: #F43F5E;
+    --amber: #FBBF24;
+    --orange: #FB923C;
+    --display: 'Syne', sans-serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'SF Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Background mesh: subtle grid + blue gradient washes */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      radial-gradient(ellipse at 15% 0%, rgba(59, 130, 246, 0.12), transparent 50%),
+      radial-gradient(ellipse at 85% 100%, rgba(34, 211, 238, 0.10), transparent 50%),
+      linear-gradient(rgba(148, 175, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 175, 255, 0.04) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+  }
+
+  /* Noise overlay for texture */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  ::selection { background: var(--blue); color: var(--bg); }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px;
+    background: rgba(15, 26, 54, 0.7);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(148, 175, 255, 0.06);
+  }
+  .nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px 6px 6px;
+    border-right: 1px solid var(--line);
+    margin-right: 4px;
+  }
+  .nav-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-weight: 600;
+    color: var(--bg);
+    font-size: 13px;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  }
+  .nav-logo-text {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+  }
+  .nav-logo-text span { color: var(--cyan); }
+  .nav-links { display: inline-flex; gap: 2px; list-style: none; }
+  .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 14px;
+    border-radius: 999px;
+    color: var(--ink-2);
+    font-size: 13px;
+    font-weight: 500;
+    transition: background 0.25s, color 0.25s;
+    font-family: var(--mono);
+  }
+  .nav-links a:hover { background: rgba(59, 130, 246, 0.1); color: var(--ink); }
+  .nav-cta {
+    margin-left: 4px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan)) !important;
+    color: var(--bg) !important;
+    font-weight: 600 !important;
+    padding: 9px 18px !important;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.35);
+    transition: transform 0.25s, box-shadow 0.25s !important;
+  }
+  .nav-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.55);
+  }
+  @media (max-width: 1100px) {
+    .nav-logo-text { display: none; }
+    .nav-logo { padding: 6px; border-right: none; margin-right: 0; }
+    .nav-links a { padding: 9px 10px; font-size: 12px; }
+  }
+  @media (max-width: 760px) {
+    .nav-links li:nth-child(n+5) { display: none; }
+  }
+  @media (max-width: 540px) {
+    .nav-links li:nth-child(n+4) { display: none; }
+  }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 120px 5% 100px; position: relative; z-index: 2; }
+  @media (max-width: 768px) { section { padding: 80px 5% 60px; } }
+
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--cyan);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 6px 14px;
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    border-radius: 100px;
+    background: rgba(34, 211, 238, 0.06);
+  }
+  .section-tag::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--cyan);
+  }
+  section h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+  }
+  section h2 em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--blue), var(--cyan), var(--electric));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .section-desc {
+    font-size: 17px;
+    color: var(--ink-2);
+    max-width: 720px;
+    margin-bottom: 60px;
+    line-height: 1.6;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    padding: 140px 5% 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .hero-bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .blob-1 {
+    top: 5%; left: -10%;
+    width: 50vw; height: 50vw;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.25), transparent 70%);
+  }
+  .blob-2 {
+    bottom: 0; right: -10%;
+    width: 50vw; height: 50vw;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.18), transparent 70%);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  @media (max-width: 1024px) { .hero-grid { grid-template-columns: 1fr; gap: 60px; } }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border: 1px solid var(--line-strong);
+    background: rgba(15, 26, 54, 0.5);
+    border-radius: 100px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-2);
+    letter-spacing: 0.02em;
+    margin-bottom: 32px;
+    backdrop-filter: blur(8px);
+  }
+  .hero-badge::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--green);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+  #hero h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(44px, 7.5vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin-bottom: 32px;
+  }
+  #hero h1 em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero-sub {
+    font-size: 18px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    max-width: 580px;
+    margin-bottom: 44px;
+  }
+  .hero-sub strong { color: var(--ink); font-weight: 500; }
+
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 60px; }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    border-radius: 100px;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    color: var(--bg);
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 8px 28px rgba(59, 130, 246, 0.35);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(59, 130, 246, 0.55);
+  }
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    border-radius: 100px;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid var(--line-strong);
+    background: rgba(15, 26, 54, 0.4);
+    backdrop-filter: blur(8px);
+    transition: border-color 0.25s, background 0.25s;
+  }
+  .btn-ghost:hover { border-color: var(--cyan); background: rgba(34, 211, 238, 0.08); }
+
+  .hero-stats {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+  }
+  .hero-stat-num {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--blue-light), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+  }
+  .hero-stat-num span { color: var(--electric); -webkit-text-fill-color: var(--electric); }
+  .hero-stat-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-3);
+  }
+
+  /* Code window in hero */
+  .code-window {
+    background: linear-gradient(180deg, rgba(15, 26, 54, 0.95), rgba(10, 17, 40, 0.95));
+    border: 1px solid var(--line-strong);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.15), 0 0 80px rgba(59, 130, 246, 0.1);
+    backdrop-filter: blur(12px);
+    transform: rotate(-1deg);
+    transition: transform 0.5s ease;
+  }
+  .code-window:hover { transform: rotate(0deg) translateY(-4px); }
+  .code-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(5, 9, 23, 0.5);
+  }
+  .code-dots { display: flex; gap: 6px; }
+  .code-dots span { width: 11px; height: 11px; border-radius: 50%; }
+  .code-dots span:nth-child(1) { background: #FF5F57; }
+  .code-dots span:nth-child(2) { background: #FFBD2E; }
+  .code-dots span:nth-child(3) { background: #28C840; }
+  .code-filename {
+    margin-left: 10px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-3);
+  }
+  .code-filename .ext { color: var(--cyan); }
+  .code-body {
+    padding: 22px 24px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.85;
+  }
+  .code-comment { color: #64748B; }
+  .code-keyword { color: var(--purple); }
+  .code-fn { color: var(--cyan); }
+  .code-string { color: var(--green); }
+  .code-num { color: var(--amber); }
+  .code-var { color: var(--blue-light); }
+  .code-tag { color: var(--red); }
+  .code-attr { color: var(--amber); }
+  .code-prompt { color: var(--ink-3); user-select: none; margin-right: 10px; }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 80px;
+    align-items: start;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  @media (max-width: 1024px) { .about-grid { grid-template-columns: 1fr; gap: 50px; } }
+
+  .about-card {
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    border: 1px solid var(--line-strong);
+    border-radius: 18px;
+    padding: 40px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.25), transparent 60%);
+    pointer-events: none;
+  }
+  .about-avatar {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 38px;
+    color: var(--bg);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.45);
+    position: relative;
+    letter-spacing: -0.02em;
+  }
+  .about-card-name {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .about-card-role {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--cyan);
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+    position: relative;
+  }
+  .about-card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 6px 12px;
+    border: 1px solid var(--line-strong);
+    border-radius: 100px;
+    color: var(--ink-2);
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .tag.blue { color: var(--blue-light); border-color: rgba(96, 165, 250, 0.3); background: rgba(59, 130, 246, 0.08); }
+  .tag.cyan { color: var(--cyan); border-color: rgba(34, 211, 238, 0.3); background: rgba(34, 211, 238, 0.08); }
+  .tag.purple { color: var(--purple); border-color: rgba(167, 139, 250, 0.3); background: rgba(167, 139, 250, 0.08); }
+  .tag.green { color: var(--green); border-color: rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.08); }
+
+  .about-text p {
+    color: var(--ink-2);
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  .about-text p strong { color: var(--ink); font-weight: 500; }
+  .about-text p em { color: var(--cyan); font-style: normal; font-weight: 500; }
+
+  .about-meta {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 24px;
+  }
+  .meta-item .meta-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-3);
+    margin-bottom: 4px;
+  }
+  .meta-item .meta-value {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ── EXPERTISE ── */
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) { .expertise-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .expertise-grid { grid-template-columns: 1fr; } }
+
+  .expertise-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .expertise-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .expertise-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--line-strong);
+    background: var(--surface-2);
+  }
+  .expertise-card:hover::before { opacity: 1; }
+  .expertise-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(34, 211, 238, 0.12));
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--cyan);
+  }
+  .expertise-card h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  .expertise-card p {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.65;
+    margin-bottom: 18px;
+  }
+  .expertise-card .tools {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+  }
+  .expertise-card .tools span { color: var(--cyan); margin-right: 6px; }
+
+  /* ── FRAMEWORKS ── */
+  #frameworks {
+    background: linear-gradient(180deg, transparent, rgba(34, 211, 238, 0.03), transparent);
+  }
+  .frameworks-wrap { max-width: 1300px; margin: 0 auto; }
+  .frameworks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (max-width: 900px) { .frameworks-grid { grid-template-columns: 1fr; } }
+
+  .framework-card {
+    position: relative;
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    border: 1px solid var(--line-strong);
+    border-radius: 18px;
+    padding: 36px 30px;
+    overflow: hidden;
+    transition: transform 0.35s, border-color 0.35s;
+  }
+  .framework-card:hover { transform: translateY(-6px); border-color: var(--cyan); }
+  .framework-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 100% 0%, rgba(34, 211, 238, 0.10), transparent 60%);
+    pointer-events: none;
+  }
+  .framework-mono {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .framework-name {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, var(--blue-light), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .framework-card.purple .framework-name {
+    background: linear-gradient(135deg, var(--purple), var(--electric));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .framework-card.amber .framework-name {
+    background: linear-gradient(135deg, var(--amber), var(--orange));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .framework-tagline {
+    font-size: 14px;
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .framework-desc {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .framework-list {
+    list-style: none;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    position: relative;
+  }
+  .framework-list li {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-2);
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .framework-list li::before {
+    content: '▸';
+    color: var(--cyan);
+    font-size: 10px;
+  }
+
+  /* ── EXPERIENCE TIMELINE ── */
+  .experience-wrap { max-width: 1100px; margin: 0 auto; position: relative; }
+  .timeline { position: relative; padding-left: 40px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 14px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--cyan), var(--blue), transparent);
+    opacity: 0.4;
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: 44px;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-dot {
+    position: absolute;
+    left: -34px;
+    top: 6px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--cyan);
+    box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.12), 0 0 20px rgba(34, 211, 238, 0.4);
+  }
+  .timeline-dot.current { background: var(--cyan); animation: pulse 2.4s infinite; }
+  .timeline-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .timeline-meta .timeline-pill {
+    padding: 3px 10px;
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    background: rgba(34, 211, 238, 0.06);
+    border-radius: 100px;
+    font-size: 10px;
+  }
+  .timeline-role {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .timeline-org {
+    font-size: 14px;
+    color: var(--ink-2);
+    margin-bottom: 18px;
+  }
+  .timeline-org strong { color: var(--blue-light); font-weight: 500; }
+  .timeline-points {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+  .timeline-points li {
+    font-size: 14.5px;
+    color: var(--ink-2);
+    line-height: 1.65;
+    padding-left: 22px;
+    position: relative;
+  }
+  .timeline-points li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 11px;
+    width: 12px; height: 1px;
+    background: var(--cyan);
+    opacity: 0.6;
+  }
+  .timeline-points li strong { color: var(--ink); font-weight: 500; }
+  .timeline-points li em { color: var(--cyan); font-style: normal; font-weight: 500; }
+
+  /* ── IMPACT ── */
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 1300px;
+    margin: 0 auto 40px;
+  }
+  @media (max-width: 900px) { .impact-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 540px) { .impact-grid { grid-template-columns: 1fr; } }
+
+  .impact-card {
+    padding: 30px 24px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+  .impact-card:hover { transform: translateY(-3px); border-color: var(--line-strong); }
+  .impact-num {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--blue-light), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 12px;
+  }
+  .impact-num span { color: var(--electric); -webkit-text-fill-color: var(--electric); }
+  .impact-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-3);
+    margin-bottom: 12px;
+  }
+  .impact-desc {
+    font-size: 13.5px;
+    color: var(--ink-2);
+    line-height: 1.6;
+  }
+
+  .case-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) { .case-grid { grid-template-columns: 1fr; } }
+
+  .case-card {
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    border: 1px solid var(--line-strong);
+    border-radius: 16px;
+    padding: 32px;
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .case-card:hover { transform: translateY(-4px); border-color: var(--cyan); }
+  .case-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--cyan);
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .case-card h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .case-card p {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+  .case-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  .case-tech .tag {
+    font-size: 10.5px;
+    padding: 4px 10px;
+  }
+  .case-outcome {
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: rgba(34, 211, 238, 0.06);
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .case-outcome strong {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cyan);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  /* ── SERVICES ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; } }
+
+  .service-card {
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 36px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  .service-card:hover { transform: translateY(-4px); border-color: var(--line-strong); }
+  .service-card.featured {
+    border-color: rgba(34, 211, 238, 0.35);
+    background: linear-gradient(180deg, rgba(34, 211, 238, 0.08), var(--surface-2));
+  }
+  .service-card.featured::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(34, 211, 238, 0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .service-pill {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    background: rgba(34, 211, 238, 0.05);
+    border-radius: 100px;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .service-card h3 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .service-card > p {
+    font-size: 14.5px;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin-bottom: 22px;
+    position: relative;
+  }
+  .service-list {
+    list-style: none;
+    position: relative;
+  }
+  .service-list li {
+    font-size: 13.5px;
+    color: var(--ink-2);
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .service-list li:last-child { border-bottom: none; }
+  .service-list li::before {
+    content: '◆';
+    color: var(--cyan);
+    font-size: 8px;
+  }
+
+  /* ── TECH STACK ── */
+  .stack-wrap { max-width: 1300px; margin: 0 auto; }
+  .stack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  @media (max-width: 900px) { .stack-grid { grid-template-columns: 1fr; } }
+
+  .stack-row {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 26px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+    align-items: center;
+    transition: border-color 0.25s, background 0.25s;
+  }
+  .stack-row:hover { border-color: var(--line-strong); background: var(--surface-2); }
+  @media (max-width: 600px) { .stack-row { grid-template-columns: 1fr; gap: 12px; } }
+
+  .stack-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .stack-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.16), rgba(34, 211, 238, 0.10));
+    border: 1px solid rgba(34, 211, 238, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cyan);
+    flex-shrink: 0;
+  }
+  .stack-name {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+  .stack-name small {
+    display: block;
+    font-family: var(--mono);
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+  }
+  .stack-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .stack-items .tag { font-size: 11px; padding: 5px 11px; }
+
+  /* ── CERTIFICATIONS ── */
+  .cert-wrap { max-width: 1200px; margin: 0 auto; }
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 1000px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .cert-grid { grid-template-columns: 1fr; } }
+
+  .cert-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 20px;
+    transition: transform 0.25s, border-color 0.25s, background 0.25s;
+  }
+  .cert-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--cyan);
+    background: var(--surface-2);
+  }
+  .cert-cat {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .cert-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .cert-issuer {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-3);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── EDUCATION + LANGUAGES strip ── */
+  .edu-strip {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 18px;
+    max-width: 1200px;
+    margin: 50px auto 0;
+  }
+  @media (max-width: 800px) { .edu-strip { grid-template-columns: 1fr; } }
+
+  .edu-card, .lang-card {
+    background: linear-gradient(180deg, var(--surface), var(--surface-2));
+    border: 1px solid var(--line-strong);
+    border-radius: 14px;
+    padding: 26px 28px;
+  }
+  .edu-card h4, .lang-card h4 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.015em;
+    margin-bottom: 14px;
+  }
+  .edu-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .edu-card p {
+    font-size: 14px;
+    color: var(--ink-2);
+    line-height: 1.65;
+  }
+  .lang-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 14px;
+  }
+  .lang-row:last-child { border-bottom: none; }
+  .lang-row .lang-bar {
+    flex: 0 0 90px;
+    height: 4px;
+    background: rgba(148, 175, 255, 0.08);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-left: 12px;
+  }
+  .lang-row .lang-bar i {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue), var(--cyan));
+  }
+
+  /* ── DOMAINS ── */
+  .domains-wrap {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .domains-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 900px) { .domains-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 540px) { .domains-grid { grid-template-columns: 1fr; } }
+
+  .domain-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 20px;
+    transition: transform 0.25s, border-color 0.25s, background 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .domain-card:hover { transform: translateY(-3px); border-color: var(--cyan); background: var(--surface-2); }
+  .domain-card .domain-icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.16), rgba(34, 211, 238, 0.10));
+    border: 1px solid rgba(34, 211, 238, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+  .domain-card h4 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.015em;
+    margin-bottom: 6px;
+  }
+  .domain-card p {
+    font-size: 12.5px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+
+  /* ── CONTACT ── */
+  #contact {
+    text-align: center;
+    background: linear-gradient(180deg, transparent, rgba(34, 211, 238, 0.05), transparent);
+  }
+  .contact-wrap { max-width: 1000px; margin: 0 auto; }
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-top: 40px;
+  }
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--ink);
+    font-size: 14px;
+    transition: transform 0.25s, border-color 0.25s, background 0.25s;
+  }
+  .contact-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--cyan);
+    background: var(--surface-2);
+  }
+  .contact-icon {
+    font-size: 22px;
+  }
+  .contact-card .label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .contact-card .value { font-weight: 500; font-size: 13px; word-break: break-word; }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 50px 5% 40px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: var(--bg-2);
+    position: relative;
+    z-index: 2;
+  }
+  .footer-logo {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+  }
+  .footer-logo span {
+    background: linear-gradient(135deg, var(--blue), var(--cyan));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer p {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-3);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── REVEAL ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  .blink { animation: blink 1s step-end infinite; }
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <div class="nav-avatar">AB</div>
+    <span class="nav-logo-text">Ahmed<span>.</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">about</a></li>
+    <li><a href="#expertise">expertise</a></li>
+    <li><a href="#frameworks">frameworks</a></li>
+    <li><a href="#experience">experience</a></li>
+    <li><a href="#impact">impact</a></li>
+    <li><a href="#services">services</a></li>
+    <li><a href="#stack">stack</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section id="hero">
+  <div class="hero-bg-blob blob-1"></div>
+  <div class="hero-bg-blob blob-2"></div>
+
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge">Available for Architecture &amp; Transformation Engagements · KSA · 2026</div>
+      <h1>Architecting<br>digital <em>transformation.</em></h1>
+      <p class="hero-sub">
+        <strong>Enterprise Architect</strong> · <strong>Digital Transformation Specialist</strong> · <strong>Solution Architect</strong>. Aligning business vision with secure, scalable, interoperable platforms across <strong>TOGAF</strong>, <strong>NORA</strong>, and <strong>ArchiMate</strong> — with measurable clinical and operational impact.
+      </p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Explore Services →</a>
+        <a href="#experience" class="btn-ghost">View Experience</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">7<span>+</span></div>
+          <div class="hero-stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">3</div>
+          <div class="hero-stat-label">Architecture Frameworks</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">85<span>%</span></div>
+          <div class="hero-stat-label">HIMSS Stage 6 Readiness</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">12<span>+</span></div>
+          <div class="hero-stat-label">Tech &amp; Compliance Stds</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="code-window">
+        <div class="code-header">
+          <div class="code-dots"><span></span><span></span><span></span></div>
+          <div class="code-filename">enterprise_architecture<span class="ext">.archimate</span></div>
+        </div>
+        <div class="code-body">
+<span class="code-comment"># TOGAF ADM · Phase B → C · Hospital EA</span><br>
+<span class="code-keyword">domain</span> <span class="code-fn">Healthcare</span> {<br>
+&nbsp;&nbsp;<span class="code-var">business</span>: <span class="code-string">"Patient Journey"</span>,<br>
+&nbsp;&nbsp;<span class="code-var">data</span>:&nbsp;&nbsp;&nbsp;&nbsp; <span class="code-string">"FHIR · HL7 · SNOMED"</span>,<br>
+&nbsp;&nbsp;<span class="code-var">app</span>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [<span class="code-string">"EHR"</span>, <span class="code-string">"LIS"</span>, <span class="code-string">"RIS/PACS"</span>],<br>
+&nbsp;&nbsp;<span class="code-var">tech</span>:&nbsp;&nbsp;&nbsp;&nbsp; <span class="code-string">"Mirth · K8s · DR"</span><br>
+}<br>
+<br>
+<span class="code-fn">align</span>(<span class="code-var">vision</span>, <span class="code-var">capability_map</span>)<br>
+&nbsp;&nbsp;.<span class="code-fn">withFramework</span>(<span class="code-string">"TOGAF"</span>, <span class="code-string">"NORA"</span>)<br>
+&nbsp;&nbsp;.<span class="code-fn">compliance</span>(<span class="code-string">"HIPAA"</span>, <span class="code-string">"GDPR"</span>)<br>
+&nbsp;&nbsp;.<span class="code-fn">deliver</span>()<br>
+<br>
+<span class="code-prompt">&gt;</span> <span class="code-comment">HIMSS Stage 6 · 85% readiness<span class="blink">▌</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-card reveal">
+      <div class="about-avatar">AB</div>
+      <div class="about-card-name">Ahmed M. Bedeer</div>
+      <div class="about-card-role">$ enterprise_architect · digital_transformation</div>
+      <div class="about-card-tags">
+        <span class="tag blue">TOGAF</span>
+        <span class="tag blue">NORA</span>
+        <span class="tag cyan">ArchiMate</span>
+        <span class="tag cyan">HIMSS</span>
+        <span class="tag">HL7</span>
+        <span class="tag">FHIR</span>
+        <span class="tag">DICOM</span>
+        <span class="tag purple">Java</span>
+        <span class="tag purple">Spring Boot</span>
+        <span class="tag green">CPHIMS</span>
+      </div>
+      <div class="about-meta">
+        <div class="meta-item">
+          <div class="meta-label">Based In</div>
+          <div class="meta-value">Al Khobar, KSA</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Nationality</div>
+          <div class="meta-value">Egyptian 🇪🇬</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Experience</div>
+          <div class="meta-value">7+ Years</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Languages</div>
+          <div class="meta-value">EN · AR</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text reveal">
+      <span class="section-tag">About Me</span>
+      <h2>Business vision.<br><em>Architected outcomes.</em></h2>
+      <p>
+        I am an <strong>Enterprise Architecture &amp; Digital Transformation Specialist</strong> based in <strong>Al Khobar, Saudi Arabia</strong>, delivering enterprise-scale healthcare and technology solutions for over <strong>seven years</strong>. My practice connects strategy, architecture, and engineering — translating C-level vision into governed, executable transformation roadmaps.
+      </p>
+      <p>
+        My focus sits at the intersection of three frameworks: <em>TOGAF</em> for enterprise architecture discipline, <em>NORA</em> for alignment with Saudi digital governance, and <em>ArchiMate</em> for modeling business, application, data, and technology layers as one coherent fabric. I currently apply this lens to the <strong>GAD Heart &amp; Lung Institute</strong> — a newly established specialized hospital and the first of its kind in the Middle East.
+      </p>
+      <p>
+        Beyond healthcare, I work flexibly across domains — building <em>data architectures</em>, <em>integration platforms</em>, and <em>cloud-native services</em> in Java, Spring Boot, and microservices. I'm CPHIMS-aligned, fluent in HL7/FHIR/DICOM/SNOMED/LOINC, and have shipped EDW pipelines, BI dashboards, and predictive analytics that moved real KPIs — including a <strong>12% reduction in ICU length of stay</strong> and a <strong>25% faster month-end close</strong>.
+      </p>
+      <p>
+        Whether the engagement is a <strong>greenfield hospital build</strong>, a <strong>data governance program</strong>, or a <strong>cloud modernization</strong>, my goal is the same: align the business with technology that is secure, scalable, interoperable — and demonstrably valuable.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EXPERTISE ========== -->
+<section id="expertise">
+  <div style="max-width: 1300px; margin: 0 auto;">
+    <span class="section-tag">Core Expertise</span>
+    <h2>Where I <em>specialize.</em></h2>
+    <p class="section-desc">From strategic enterprise architecture down to integration engineering — covering the full vertical from boardroom to platform.</p>
+
+    <div class="expertise-grid">
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">EA</div>
+        <h3>Enterprise Architecture</h3>
+        <p>TOGAF-aligned architecture roadmaps, capability modeling, operating models, and IT governance. Translate strategy into structured BDAT layers with clear transition states.</p>
+        <div class="tools"><span>tools:</span> Sparx EA · Visual Paradigm · ArchiMate</div>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">DX</div>
+        <h3>Digital Transformation</h3>
+        <p>Business–IT alignment, process re-engineering, automation, and KPI-driven execution. From transformation roadmaps to change enablement and value realization.</p>
+        <div class="tools"><span>tools:</span> NORA · TOGAF · KPI frameworks</div>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">⚕</div>
+        <h3>Healthcare Informatics</h3>
+        <p>HIS, EHR/EMR, ERP, LIS, RIS/PACS, ICU and patient-facing portals. End-to-end clinical workflow design and HIMSS Stage 6 readiness execution.</p>
+        <div class="tools"><span>tools:</span> HIMSS · CPHIMS · HL7 · FHIR</div>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">⇄</div>
+        <h3>Integration &amp; Interoperability</h3>
+        <p>Mirth Connect integration bus, FHIR APIs, HL7 v2.x, and DICOM. Terminology mapping against LOINC and SNOMED CT for both regulatory reporting and CDS hooks.</p>
+        <div class="tools"><span>tools:</span> Mirth · API-First · REST · iPaaS</div>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">Σ</div>
+        <h3>Data &amp; Analytics</h3>
+        <p>ODS → EDW pipelines, ETL orchestration, BI dashboards, and predictive analytics. Data governance, master data, and population health registries.</p>
+        <div class="tools"><span>tools:</span> Power BI · Tableau · Python · SQL</div>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">{ }</div>
+        <h3>Software Engineering</h3>
+        <p>Java 17 / Spring Boot microservices, Node.js services, OODA design, RESTful APIs, and PostgreSQL/MySQL platforms — built API-first and production-ready.</p>
+        <div class="tools"><span>tools:</span> Java · Spring · Node · PostgreSQL</div>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">☁</div>
+        <h3>Cloud &amp; Infrastructure</h3>
+        <p>Docker, Kubernetes, VLAN-segmented networks, HA WAN links, active-passive clustering, and DR architectures with sub-1% RTO failover.</p>
+        <div class="tools"><span>tools:</span> Docker · K8s · Aruba · Palo Alto</div>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">🛡</div>
+        <h3>Security &amp; Compliance</h3>
+        <p>Privacy-by-design controls satisfying HIPAA &amp; GDPR — AAA model, audit logging, encryption-at-rest. Security architecture aligned with healthcare regulation.</p>
+        <div class="tools"><span>tools:</span> HIPAA · GDPR · AAA · IAM</div>
+      </div>
+      <div class="expertise-card reveal">
+        <div class="expertise-icon">⚙</div>
+        <h3>Project &amp; Program Delivery</h3>
+        <p>Active PMO collaboration, technical documentation, vendor &amp; SOW review, and SME advisory. Lean Six Sigma, Agile, and operational excellence.</p>
+        <div class="tools"><span>tools:</span> Agile · Lean Six Sigma · PMO</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FRAMEWORKS ========== -->
+<section id="frameworks">
+  <div class="frameworks-wrap">
+    <span class="section-tag">Architecture Frameworks</span>
+    <h2>Three lenses,<br>one <em>integrated practice.</em></h2>
+    <p class="section-desc">My practice is anchored in three complementary frameworks. Together they give a complete picture: <strong>why</strong> we are transforming, <strong>what</strong> we are building, and <strong>how</strong> it aligns with national and international standards.</p>
+
+    <div class="frameworks-grid">
+      <div class="framework-card reveal">
+        <div class="framework-mono">// Framework 01</div>
+        <div class="framework-name">TOGAF</div>
+        <div class="framework-tagline">The Open Group Architecture Framework</div>
+        <p class="framework-desc">A disciplined, iterative method for designing the enterprise. I apply the Architecture Development Method (ADM) end-to-end — vision through governance — keeping every artifact traceable to business value.</p>
+        <ul class="framework-list">
+          <li>ADM phases A through H</li>
+          <li>Architecture Repository &amp; Continuum</li>
+          <li>Capability-based planning</li>
+          <li>Architecture Governance Board</li>
+          <li>Reference models &amp; building blocks</li>
+        </ul>
+      </div>
+
+      <div class="framework-card purple reveal">
+        <div class="framework-mono">// Framework 02</div>
+        <div class="framework-name">NORA</div>
+        <div class="framework-tagline">National Overall Reference Architecture · KSA</div>
+        <p class="framework-desc">Saudi Arabia's reference architecture for digital government. I align engagements with NORA to ensure compliance with national digital governance, interoperability, and citizen-experience standards across Vision 2030 initiatives.</p>
+        <ul class="framework-list">
+          <li>Business · Data · Application · Tech layers</li>
+          <li>Saudi digital governance alignment</li>
+          <li>Vision 2030 traceability</li>
+          <li>Interoperability standards</li>
+          <li>Citizen-centric service design</li>
+        </ul>
+      </div>
+
+      <div class="framework-card amber reveal">
+        <div class="framework-mono">// Framework 03</div>
+        <div class="framework-name">ArchiMate</div>
+        <div class="framework-tagline">Open Group Modeling Standard</div>
+        <p class="framework-desc">The visual language that makes architecture decisions reviewable. I model business processes, application landscapes, data flows, and technology stacks as a single, navigable map — bridging strategy and implementation.</p>
+        <ul class="framework-list">
+          <li>Strategy, Business, Application, Tech, Physical</li>
+          <li>Motivation &amp; Implementation extensions</li>
+          <li>Cross-layer relationships &amp; viewpoints</li>
+          <li>Sparx EA &amp; Visual Paradigm modeling</li>
+          <li>Living architecture documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DOMAINS ========== -->
+<section id="domains" style="padding-top: 0;">
+  <div class="domains-wrap">
+    <span class="section-tag">Domains</span>
+    <h2>Domains I <em>work across.</em></h2>
+    <p class="section-desc">My architecture practice is intentionally cross-domain. The frameworks stay constant; the context adapts.</p>
+
+    <div class="domains-grid">
+      <div class="domain-card reveal">
+        <div class="domain-icon">⚕</div>
+        <h4>Healthcare</h4>
+        <p>HIS, EHR, EMR, LIS, RIS/PACS, ICU systems, patient portals, clinical informatics.</p>
+      </div>
+      <div class="domain-card reveal">
+        <div class="domain-icon">🏛</div>
+        <h4>Government &amp; Public Sector</h4>
+        <p>NORA-aligned digital services, citizen experience, e-government interoperability.</p>
+      </div>
+      <div class="domain-card reveal">
+        <div class="domain-icon">📊</div>
+        <h4>Data &amp; Analytics</h4>
+        <p>EDW design, master data, BI platforms, predictive analytics, data governance.</p>
+      </div>
+      <div class="domain-card reveal">
+        <div class="domain-icon">☁</div>
+        <h4>Cloud &amp; Platform</h4>
+        <p>Microservices, container platforms, hybrid cloud, DR architecture, platform strategy.</p>
+      </div>
+      <div class="domain-card reveal">
+        <div class="domain-icon">🛒</div>
+        <h4>E-Commerce &amp; SME</h4>
+        <p>Scalable transaction platforms, OODA-driven design, automation, growth-stage architecture.</p>
+      </div>
+      <div class="domain-card reveal">
+        <div class="domain-icon">🏢</div>
+        <h4>Enterprise IT</h4>
+        <p>ERP, HR, finance integrations, IT operating models, automation, change enablement.</p>
+      </div>
+      <div class="domain-card reveal">
+        <div class="domain-icon">🔌</div>
+        <h4>Integration &amp; iPaaS</h4>
+        <p>HL7, FHIR, DICOM, REST APIs, Mirth Connect, message brokering, API-first design.</p>
+      </div>
+      <div class="domain-card reveal">
+        <div class="domain-icon">🛡</div>
+        <h4>Security &amp; Compliance</h4>
+        <p>HIPAA, GDPR, AAA model, audit logging, encryption, identity, privacy-by-design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EXPERIENCE ========== -->
+<section id="experience">
+  <div class="experience-wrap">
+    <span class="section-tag">Experience</span>
+    <h2>A <em>seven-year</em> trajectory.</h2>
+    <p class="section-desc">From data analysis and infrastructure to enterprise architecture and digital transformation leadership across Saudi Arabia.</p>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot current"></div>
+        <div class="timeline-meta">
+          <span>2026 — Present</span>
+          <span class="timeline-pill">Independent</span>
+        </div>
+        <div class="timeline-role">Enterprise Architecture &amp; Digital Transformation Consultant</div>
+        <div class="timeline-org">Independent Practice · Cross-Industry · <strong>KSA / Remote</strong></div>
+        <ul class="timeline-points">
+          <li>Lead <strong>enterprise architecture initiatives</strong> aligned with TOGAF and NORA frameworks across healthcare and SME environments.</li>
+          <li>Design <em>end-to-end digital transformation strategies</em> integrating governance, operating models, and data architecture.</li>
+          <li>Establish enterprise <strong>data governance frameworks</strong>, master data models, and analytics roadmaps.</li>
+          <li>Advise executive leadership on technology investment, modernization strategy, and transformation execution.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span>Aug 2023 — Present</span>
+          <span class="timeline-pill">Healthcare · KSA</span>
+        </div>
+        <div class="timeline-role">Healthcare IT Project Engineer</div>
+        <div class="timeline-org">GAD International · <strong>Heart &amp; Lung Institute, Al Khobar</strong> — first specialized cardiac &amp; pulmonary hospital in the Middle East</div>
+        <ul class="timeline-points">
+          <li>Architected enterprise digital health ecosystem integrating <strong>EHR, LIS, RIS/PACS, ICU, and patient portals</strong>, achieving <em>85% HIMSS Stage 6 readiness</em>.</li>
+          <li>Designed interoperability architecture using <strong>FHIR APIs, HL7 messaging, IoT integration, and Mirth Connect</strong> across 7 hospital departments and 3 outpatient clinics.</li>
+          <li>Built <strong>ODS → EDW data platform</strong> with ETL pipelines feeding BI dashboards for OR utilization, readmission risk, and supply-chain efficiency.</li>
+          <li>Modeled UML-driven revenue-cycle workflows reducing <em>month-end close by 25%</em>.</li>
+          <li>Implemented VLAN-segmented networks, HA WAN links, and DR architecture with <em>sub-1% RTO failover</em>.</li>
+          <li>Authored privacy-by-design controls (AAA, audit logging, encryption-at-rest) satisfying HIPAA &amp; GDPR.</li>
+          <li>Active PMO member — technical documentation, LC/ITC reviews, vendor SOW alignment with hospital vision.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span>Mar 2024 — Present</span>
+          <span class="timeline-pill">Freelance · HIMS</span>
+        </div>
+        <div class="timeline-role">Healthcare Digitalization &amp; Telehealth Consultant</div>
+        <div class="timeline-org">Freelance HIMS Project · <strong>Gulf Region</strong></div>
+        <ul class="timeline-points">
+          <li>Strategic advisor for aligning digital health initiatives with global <strong>HIMSS, HL7, HIPAA, FHIR</strong> frameworks.</li>
+          <li>Led initiatives to improve digital health maturity and organizational <em>interoperability</em>.</li>
+          <li>Directed health data integration efforts using HL7 protocols for seamless information exchange.</li>
+          <li>Championed <em>FHIR adoption</em> for efficient, secure, modern EHR interoperability.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span>Mar 2022 — Aug 2023</span>
+          <span class="timeline-pill">ICT Build</span>
+        </div>
+        <div class="timeline-role">IT Project Engineer</div>
+        <div class="timeline-org">GAD International · <strong>Baha Medical Center, KSA</strong></div>
+        <ul class="timeline-points">
+          <li>Delivered <em>90% readiness</em> of ICT hospital infrastructure including firewalls, VLANs, Active Directory, and DNS.</li>
+          <li>Implemented network protocols — <strong>VLANs, OSPF, IP Access Lists</strong> — across hospital backbone.</li>
+          <li>Configured DNS, email servers, Wi-Fi infrastructure, and Active Directory for clinical operations.</li>
+          <li>Tested and commissioned hospital systems achieving <em>75% infrastructure completion</em> on schedule.</li>
+          <li>Provided on-site and remote technical support for HIS/ERP system rollout.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-meta">
+          <span>Jan 2022 — Mar 2022</span>
+          <span class="timeline-pill">Analytics</span>
+        </div>
+        <div class="timeline-role">Data Analyst &amp; IT Engineer</div>
+        <div class="timeline-org">Medical Mall · <strong>Riyadh, KSA</strong></div>
+        <ul class="timeline-points">
+          <li>Built Power BI analytics and SQL reporting platforms for supply-chain and operational intelligence.</li>
+          <li>Developed automation and workforce-management applications improving organizational efficiency.</li>
+          <li>Designed organizational plans and future-state visions in support of business strategy.</li>
+          <li>Modeled business data and built desktop applications for <em>CV analysis and supply-chain</em> use cases.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== IMPACT ========== -->
+<section id="impact">
+  <div style="max-width: 1300px; margin: 0 auto;">
+    <span class="section-tag">Selected Impact</span>
+    <h2>Architecture that <em>moved KPIs.</em></h2>
+    <p class="section-desc">Numbers from real engagements — clinical, operational, and financial outcomes that prove architecture is more than diagrams.</p>
+
+    <div class="impact-grid">
+      <div class="impact-card reveal">
+        <div class="impact-num">12<span>%</span></div>
+        <div class="impact-label">ICU LOS Reduction</div>
+        <div class="impact-desc">Predictive analytics &amp; care-gap alerting integrated into the EDW supported proactive outreach.</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">85<span>%</span></div>
+        <div class="impact-label">HIMSS Stage 6 Readiness</div>
+        <div class="impact-desc">End-to-end EHR/EMR, RIS/PACS, LIS, perioperative, ICU, and portal flows aligned with HIMSS standards.</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">25<span>%</span></div>
+        <div class="impact-label">Faster Month-End Close</div>
+        <div class="impact-desc">UML-modeled revenue-cycle workflows streamlined order lifecycle and charge capture.</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">40<span>%</span></div>
+        <div class="impact-label">Less Admin Overhead</div>
+        <div class="impact-desc">Patient-centric Java/Spring Boot application automated appointment &amp; insurance workflows.</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">50<span>%</span></div>
+        <div class="impact-label">Throughput Boost</div>
+        <div class="impact-desc">Kubernetes-based microservices scaling lifted e-commerce transaction throughput at peak load.</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">30<span>%</span></div>
+        <div class="impact-label">Faster HR Cycles</div>
+        <div class="impact-desc">Cloud-native automation reduced HR leave-approval time via Docker + Java workflows.</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">90<span>%</span></div>
+        <div class="impact-label">ICT Infra Delivered</div>
+        <div class="impact-desc">Baha Medical Center critical infrastructure including network protocols and secure data systems.</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">$500K<span>+</span></div>
+        <div class="impact-label">Cost-Savings Identified</div>
+        <div class="impact-desc">Automated market analysis dashboard delivered real-time insights for stakeholder decisions.</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 60px;">
+      <h2 style="font-size: clamp(28px, 3.6vw, 42px);">Featured <em>case studies.</em></h2>
+      <p class="section-desc">A closer look at four engagements where strategy, architecture, and engineering came together.</p>
+
+      <div class="case-grid">
+        <div class="case-card reveal">
+          <div class="case-num">CASE 01 · HEALTHCARE</div>
+          <h3>GAD Heart &amp; Lung Institute — Greenfield EA</h3>
+          <p>Architected and documented end-to-end flows for EHR/EMR, RIS/PACS, LIS, perioperative, ICU, and patient-facing portals. Delivered clinical informatics integration guidelines covering FHIR APIs, HL7 interfaces, and IoT streams across seven departments and three outpatient clinics.</p>
+          <div class="case-tech">
+            <span class="tag blue">HIMSS</span>
+            <span class="tag blue">FHIR</span>
+            <span class="tag cyan">IoT</span>
+            <span class="tag cyan">UML</span>
+            <span class="tag">CAD</span>
+            <span class="tag">HIS</span>
+            <span class="tag">HIPAA</span>
+            <span class="tag">GDPR</span>
+          </div>
+          <div class="case-outcome">
+            <strong>Outcome</strong>
+            85% Technology Environment Design alignment with HIMSS Stage 6, with main flows mapped per system and department structure.
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-num">CASE 02 · INFRASTRUCTURE</div>
+          <h3>Baha Medical Center — ICT Deployment</h3>
+          <p>Designed and supervised the implementation of the ICT healthcare environment — Aruba switching, Palo Alto firewalls, Active Directory, DNS — and rolled out network protocols (VLANs, OSPF, IP Access Lists) for the hospital's clinical backbone.</p>
+          <div class="case-tech">
+            <span class="tag blue">Aruba</span>
+            <span class="tag blue">Palo Alto</span>
+            <span class="tag cyan">Active Directory</span>
+            <span class="tag cyan">DNS</span>
+            <span class="tag">CCNA</span>
+            <span class="tag">CCNP</span>
+            <span class="tag">VLANs</span>
+            <span class="tag">OSPF</span>
+          </div>
+          <div class="case-outcome">
+            <strong>Outcome</strong>
+            90% of critical infrastructure delivered, with secure patient-data systems and full network protocol coverage.
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-num">CASE 03 · APPLICATION</div>
+          <h3>Patient-Centric Healthcare Application</h3>
+          <p>Designed a microservices-based application automating appointment and insurance workflows for hospital operations. Built on Java/Spring Boot with a Node.js front-of-house layer, the platform reached 95% production-readiness and cut administrative overhead by 40%.</p>
+          <div class="case-tech">
+            <span class="tag blue">Java</span>
+            <span class="tag blue">Spring Boot</span>
+            <span class="tag cyan">Node.js</span>
+            <span class="tag cyan">Microservices</span>
+            <span class="tag">REST</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+          <div class="case-outcome">
+            <strong>Outcome</strong>
+            40% reduction in admin overhead via automated appointment/insurance workflows; 95% production-ready.
+          </div>
+        </div>
+
+        <div class="case-card reveal">
+          <div class="case-num">CASE 04 · DATA &amp; ANALYTICS</div>
+          <h3>Predictive No-Show &amp; Market Dashboard</h3>
+          <p>Two analytics initiatives: a Python-based predictive patient no-show model achieving 85% accuracy, plus an automated market analysis dashboard combining Power BI, SQL, and Python — surfacing $500K+ in cost-saving opportunities for stakeholders in real time.</p>
+          <div class="case-tech">
+            <span class="tag blue">Python</span>
+            <span class="tag blue">Pandas</span>
+            <span class="tag cyan">scikit-learn</span>
+            <span class="tag cyan">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Tableau</span>
+          </div>
+          <div class="case-outcome">
+            <strong>Outcome</strong>
+            85% no-show forecast accuracy and $500K+ identified savings; reduced clinic revenue loss.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section id="services">
+  <div style="max-width: 1300px; margin: 0 auto;">
+    <span class="section-tag">Services</span>
+    <h2>How I can <em>help you.</em></h2>
+    <p class="section-desc">Architecture and transformation engagements tailored to executive teams, healthcare providers, and technology organizations operating across the Gulf and beyond.</p>
+
+    <div class="services-grid">
+      <div class="service-card featured reveal">
+        <div class="service-pill">Most Requested</div>
+        <h3>Enterprise Architecture &amp; Strategy</h3>
+        <p>End-to-end TOGAF-aligned architecture engagements — from current-state assessment to target-state vision and a phased transition roadmap with clear governance.</p>
+        <ul class="service-list">
+          <li>Architecture Vision &amp; Capability Mapping</li>
+          <li>Business · Data · Application · Tech layers</li>
+          <li>NORA alignment for KSA programs</li>
+          <li>ArchiMate modeling &amp; documentation</li>
+          <li>Architecture Governance Board enablement</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-pill">Healthcare</div>
+        <h3>Healthcare Digital Transformation</h3>
+        <p>Hospital and clinic transformations executed against HIMSS Stage 6+ readiness — from EHR selection to interoperability rollout and clinical informatics maturity.</p>
+        <ul class="service-list">
+          <li>HIS / EHR / EMR architecture</li>
+          <li>HL7 · FHIR · DICOM integration</li>
+          <li>Mirth Connect &amp; integration bus design</li>
+          <li>HIMSS readiness &amp; CPHIMS-aligned advisory</li>
+          <li>Privacy-by-design (HIPAA / GDPR)</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-pill">Data</div>
+        <h3>Data Architecture &amp; Analytics</h3>
+        <p>From data governance frameworks to ODS → EDW pipelines and BI platforms — building the data foundation that feeds dashboards, ML models, and executive decisions.</p>
+        <ul class="service-list">
+          <li>Data governance &amp; master data models</li>
+          <li>EDW design &amp; ETL orchestration</li>
+          <li>Power BI / Tableau dashboarding</li>
+          <li>Predictive analytics with Python</li>
+          <li>KPI frameworks &amp; data storytelling</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-pill">Solution</div>
+        <h3>Solution Architecture</h3>
+        <p>API-first solution architectures in Java/Spring Boot and Node.js — microservices, REST APIs, database design, and OODA-driven analysis bridging product and platform.</p>
+        <ul class="service-list">
+          <li>Microservices &amp; domain-driven design</li>
+          <li>API design &amp; integration patterns</li>
+          <li>PostgreSQL / MySQL data modeling</li>
+          <li>OODA: requirements → use cases → notation</li>
+          <li>System design &amp; technical reviews</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-pill">Cloud</div>
+        <h3>Cloud &amp; Platform Modernization</h3>
+        <p>Containerize, orchestrate, scale. Modernization roadmaps that move workloads onto Docker/Kubernetes with the resilience and DR posture an enterprise needs.</p>
+        <ul class="service-list">
+          <li>Docker &amp; Kubernetes platform design</li>
+          <li>HA &amp; Disaster Recovery architecture</li>
+          <li>Network segmentation (VLANs, firewalls)</li>
+          <li>Hybrid &amp; private cloud patterns</li>
+          <li>Reliability, observability, cost guardrails</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-pill">Advisory</div>
+        <h3>Executive &amp; PMO Advisory</h3>
+        <p>Trusted advisor for chairmen, CIOs, and PMOs. From technical reviews of vendor proposals to weekly governance support and SME consultation across the program lifecycle.</p>
+        <ul class="service-list">
+          <li>Vendor &amp; SOW technical review</li>
+          <li>PMO &amp; weekly governance support</li>
+          <li>SME / chairman advisory sessions</li>
+          <li>Business plans &amp; org charts</li>
+          <li>Lean Six Sigma &amp; Agile enablement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== STACK ========== -->
+<section id="stack">
+  <div class="stack-wrap">
+    <span class="section-tag">Technical Stack</span>
+    <h2>The <em>tools</em> I bring.</h2>
+    <p class="section-desc">A practitioner's stack — covering modeling, engineering, data, infrastructure, and compliance. Selected based on outcomes, not hype.</p>
+
+    <div class="stack-grid">
+      <div class="stack-row reveal">
+        <div class="stack-label">
+          <div class="stack-icon">EA</div>
+          <div class="stack-name">Architecture &amp; Modeling<small>frameworks · notations</small></div>
+        </div>
+        <div class="stack-items">
+          <span class="tag blue">TOGAF</span>
+          <span class="tag blue">NORA</span>
+          <span class="tag cyan">ArchiMate</span>
+          <span class="tag cyan">Sparx EA</span>
+          <span class="tag">Visual Paradigm</span>
+          <span class="tag">UML</span>
+          <span class="tag">Enterprise Integration</span>
+        </div>
+      </div>
+
+      <div class="stack-row reveal">
+        <div class="stack-label">
+          <div class="stack-icon">⚕</div>
+          <div class="stack-name">Healthcare Standards<small>interoperability</small></div>
+        </div>
+        <div class="stack-items">
+          <span class="tag blue">HL7</span>
+          <span class="tag blue">FHIR</span>
+          <span class="tag cyan">DICOM</span>
+          <span class="tag cyan">SNOMED CT</span>
+          <span class="tag">LOINC</span>
+          <span class="tag">CPT</span>
+          <span class="tag">ICD-10</span>
+          <span class="tag">Mirth Connect</span>
+        </div>
+      </div>
+
+      <div class="stack-row reveal">
+        <div class="stack-label">
+          <div class="stack-icon">{ }</div>
+          <div class="stack-name">Engineering<small>backend · platforms</small></div>
+        </div>
+        <div class="stack-items">
+          <span class="tag purple">Java 17</span>
+          <span class="tag purple">Spring Boot</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Microservices</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">API-First</span>
+          <span class="tag">OODA</span>
+          <span class="tag">Design Patterns</span>
+        </div>
+      </div>
+
+      <div class="stack-row reveal">
+        <div class="stack-label">
+          <div class="stack-icon">DB</div>
+          <div class="stack-name">Data Platforms<small>storage · analytics</small></div>
+        </div>
+        <div class="stack-items">
+          <span class="tag blue">PostgreSQL</span>
+          <span class="tag blue">MySQL</span>
+          <span class="tag cyan">SQL</span>
+          <span class="tag cyan">ETL</span>
+          <span class="tag">Python</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">scikit-learn</span>
+          <span class="tag">EDW / ODS</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Tableau</span>
+        </div>
+      </div>
+
+      <div class="stack-row reveal">
+        <div class="stack-label">
+          <div class="stack-icon">☁</div>
+          <div class="stack-name">Cloud &amp; Infrastructure<small>platforms · networks</small></div>
+        </div>
+        <div class="stack-items">
+          <span class="tag blue">Docker</span>
+          <span class="tag blue">Kubernetes</span>
+          <span class="tag cyan">Aruba</span>
+          <span class="tag cyan">Palo Alto</span>
+          <span class="tag">VLANs</span>
+          <span class="tag">OSPF</span>
+          <span class="tag">Active Directory</span>
+          <span class="tag">DNS</span>
+          <span class="tag">DR Architecture</span>
+          <span class="tag">High Availability</span>
+        </div>
+      </div>
+
+      <div class="stack-row reveal">
+        <div class="stack-label">
+          <div class="stack-icon">🛡</div>
+          <div class="stack-name">Compliance &amp; Security<small>regulatory · controls</small></div>
+        </div>
+        <div class="stack-items">
+          <span class="tag blue">HIPAA</span>
+          <span class="tag blue">GDPR</span>
+          <span class="tag cyan">HIMSS</span>
+          <span class="tag cyan">CPHIMS</span>
+          <span class="tag">AAA Model</span>
+          <span class="tag">Audit Logging</span>
+          <span class="tag">Encryption-at-Rest</span>
+          <span class="tag">Privacy-by-Design</span>
+        </div>
+      </div>
+
+      <div class="stack-row reveal">
+        <div class="stack-label">
+          <div class="stack-icon">⚙</div>
+          <div class="stack-name">Methods &amp; Practice<small>delivery · governance</small></div>
+        </div>
+        <div class="stack-items">
+          <span class="tag green">Agile</span>
+          <span class="tag green">Lean Six Sigma</span>
+          <span class="tag">Business Analysis</span>
+          <span class="tag">Operational Excellence</span>
+          <span class="tag">Product Management</span>
+          <span class="tag">PMO</span>
+          <span class="tag">SAP Production Planning</span>
+        </div>
+      </div>
+
+      <div class="stack-row reveal">
+        <div class="stack-label">
+          <div class="stack-icon">🔧</div>
+          <div class="stack-name">Productivity &amp; AI<small>tools · workflows</small></div>
+        </div>
+        <div class="stack-items">
+          <span class="tag blue">PowerShell</span>
+          <span class="tag cyan">API Documentation</span>
+          <span class="tag">Windows Server</span>
+          <span class="tag purple">AI &amp; Vibe Coding</span>
+          <span class="tag">Azure DevOps</span>
+          <span class="tag">React</span>
+          <span class="tag">JS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CERTIFICATIONS ========== -->
+<section id="certifications">
+  <div class="cert-wrap">
+    <span class="section-tag">Certifications &amp; Education</span>
+    <h2>Continuously <em>credentialed.</em></h2>
+    <p class="section-desc">Formal certifications and continuous learning across enterprise architecture, healthcare informatics, networking, programming, and management.</p>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-cat">Healthcare</div>
+        <div class="cert-name">CPHIMS — Healthcare Information &amp; Management Systems</div>
+        <div class="cert-issuer">HIMSS</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Architecture</div>
+        <div class="cert-name">Enterprise Architecture Foundations</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Standards</div>
+        <div class="cert-name">HIMSS · HL7 · FHIR · DICOM · SNOMED · ICD-10 · CPT</div>
+        <div class="cert-issuer">Healthcare Interoperability</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Networking</div>
+        <div class="cert-name">CCNP ENCOR · CCNA Cert Prep</div>
+        <div class="cert-issuer">Cisco-Aligned</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Networking</div>
+        <div class="cert-name">CompTIA Network+ (N10-007)</div>
+        <div class="cert-issuer">CompTIA</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Networking</div>
+        <div class="cert-name">GNS3 · Networking Foundations · DNS · Troubleshooting</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">System Admin</div>
+        <div class="cert-name">Microsoft PowerShell · Windows 10 IT Support</div>
+        <div class="cert-issuer">Microsoft</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">System Admin</div>
+        <div class="cert-name">SAP Production Planning · API Documentation</div>
+        <div class="cert-issuer">Industry Training</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Programming</div>
+        <div class="cert-name">Java 17 · Spring · API Design First · System Design</div>
+        <div class="cert-issuer">Java Mentorship 2025</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Programming</div>
+        <div class="cert-name">OODA · RESTful · PostgreSQL · SQL Database</div>
+        <div class="cert-issuer">Enterprise Solution Architect Path</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Data</div>
+        <div class="cert-name">Data Analysis Professional — Python · ETL · Visualization</div>
+        <div class="cert-issuer">Udacity · 2021</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Data</div>
+        <div class="cert-name">Power BI · Tableau · R · Predictive Analytics</div>
+        <div class="cert-issuer">Data Analysis Path · 2024</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Management</div>
+        <div class="cert-name">Lean Six Sigma · Business Analysis · Product Management</div>
+        <div class="cert-issuer">PMI / NASBA</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Management</div>
+        <div class="cert-name">Project Management: Technical Projects · Agile Foundations</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Leadership</div>
+        <div class="cert-name">Operational Excellence · Setting a Vision · Practical Influencing</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-cat">Career</div>
+        <div class="cert-name">Building a Second Brain · Foster a Growth Mindset</div>
+        <div class="cert-issuer">Continuous Learning</div>
+      </div>
+    </div>
+
+    <div class="edu-strip">
+      <div class="edu-card reveal">
+        <div class="edu-meta">2015 — 2019 · Egypt</div>
+        <h4>Bachelor's Degree in Computer Science</h4>
+        <p><strong style="color: var(--ink);">Thebes Academy</strong>, Cairo, Egypt — graduation project: <em style="color: var(--cyan); font-style: normal;">Unity 3D Physics Game Development</em>. Foundation in OOP, systems design, networking, and applied computer science.</p>
+      </div>
+      <div class="lang-card reveal">
+        <h4 style="margin-bottom: 16px;">Languages</h4>
+        <div class="lang-row">
+          <span style="color: var(--ink);">English</span>
+          <span style="color: var(--ink-3); font-family: var(--mono); font-size: 11px;">Professional</span>
+          <div class="lang-bar"><i style="width: 92%;"></i></div>
+        </div>
+        <div class="lang-row">
+          <span style="color: var(--ink);">Arabic</span>
+          <span style="color: var(--ink-3); font-family: var(--mono); font-size: 11px;">Native</span>
+          <div class="lang-bar"><i style="width: 100%;"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact">
+  <div class="contact-wrap">
+    <span class="section-tag">Get In Touch</span>
+    <h2>Let's <em>build something durable.</em></h2>
+    <p class="section-desc" style="margin: 0 auto 12px;">Engaging on architecture, transformation, healthcare IT, or data programs in KSA or remotely? Let's talk.</p>
+
+    <div class="contact-cards reveal">
+      <a href="mailto:abedeer332@gmail.com" class="contact-card">
+        <div class="contact-icon">✉</div>
+        <div class="label">Email</div>
+        <div class="value">abedeer332@gmail.com</div>
+      </a>
+      <a href="tel:+966539478399" class="contact-card">
+        <div class="contact-icon">☎</div>
+        <div class="label">Phone</div>
+        <div class="value">+966 53 947 8399</div>
+      </a>
+      <a href="https://www.linkedin.com/in/ahmed-bedeer" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-icon">in</div>
+        <div class="label">LinkedIn</div>
+        <div class="value">/ahmed-bedeer</div>
+      </a>
+      <a href="https://www.github.com/ahmedbdeer" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-icon">{ }</div>
+        <div class="label">GitHub</div>
+        <div class="value">@ahmedbdeer</div>
+      </a>
+      <a href="#" class="contact-card">
+        <div class="contact-icon">📍</div>
+        <div class="label">Location</div>
+        <div class="value">Al Khobar, KSA</div>
+      </a>
+      <a href="#services" class="contact-card">
+        <div class="contact-icon">⚡</div>
+        <div class="label">Engagement</div>
+        <div class="value">Consulting · Advisory</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-logo">Ahmed Bedeer<span>.</span></div>
+  <p>© 2026 Ahmed M. Bedeer · Al Khobar, KSA · Enterprise Architect</p>
+  <p>TOGAF · NORA · ArchiMate · v1.0</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), (i % 5) * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
